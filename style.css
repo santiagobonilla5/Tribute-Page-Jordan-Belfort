@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Roboto', serif;
+  color: #383f51;
+  background: #f2eee3;
+  display: flex;
+  justify-content: center;
+  text-align: justify;
+}
+
+#main {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Variables */
+:root {
+  --red: #c14953;
+  --frenchblue: #60afff;
+  --bone: #e5dcc5;
+  --bone2: #d3c39c;
+}
+/* Header */
+h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: bold;
+  padding-top: 20px;
+  font-family: 'Bodoni Moda', serif;
+}
+h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  font-family: 'Bodoni Moda', serif;
+}
+
+h3 {
+  font-family: 'Bodoni Moda', serif;
+}
+/* Image div */
+
+#img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#image {
+  max-width: 80vw;
+}
+
+#img-caption {
+  margin: 20px 30px;
+}
+
+/* Tribute Info */
+#brief {
+  font-weight: bold;
+  padding: 15px 25px;
+}
+
+/* Cards */
+#cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'one two'
+    'three four'
+    'five five';
+  gap: 20px 20px;
+}
+
+#card1 {
+  grid-area: one;
+  background-color: var(--bone2);
+}
+#card2 {
+  grid-area: two;
+}
+#card3 {
+  grid-area: three;
+}
+#card4 {
+  grid-area: four;
+  background-color: var(--bone2);
+}
+#card5 {
+  grid-area: five;
+}
+
+/* card style */
+
+.card {
+  background-color: var(--bone);
+  padding: 20px;
+}
+
+/* Learn More */
+#learn-more {
+  margin: 20px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  #cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'one'
+      'two'
+      'three'
+      'four'
+      'five';
+  }
+
+  #card3 {
+    grid-area: three;
+    background-color: var(--bone2);
+  }
+  #card4 {
+    grid-area: four;
+    background-color: var(--bone);
+  }
+  #card5 {
+    grid-area: five;
+    background-color: var(--bone2);
+  }
+}
+
+@media (max-width: 600px) {
+  #main {
+    width: 100vw;
+  }
+}
